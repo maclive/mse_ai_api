@@ -2,11 +2,5 @@ services:
   mse-api:
     build: .
     restart: unless-stopped
-    expose:
-      - "7777"
-    networks:
-      - dokploy-network
-
-networks:
-  dokploy-network:
-    external: true
+    ports:
+      - "7777:7777"
